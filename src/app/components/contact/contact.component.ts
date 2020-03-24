@@ -37,15 +37,7 @@ export class ContactComponent implements OnInit {
 
   onSaveForm() {
     console.log('saved');
-    const newContact = {
-      fname: 'adrian',
-      lname: 'fernandez',
-      email: 'adri@gmail.com',
-      subject: 'consulta',
-      message: '10% building 0/1 modules 1 active'
-    };
-
-    this.dbData.saveMessage(newContact);
+    this.dbData.saveMessage(this.contactForm.value);
   }
 
 }
