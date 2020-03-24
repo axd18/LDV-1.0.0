@@ -11,13 +11,21 @@ import { environment } from './../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { DataService } from './services/data-db.service';
+import { HomeSectionComponent } from './components/home-section/home-section.component';
+import { AboutSectionComponent } from './components/about-section/about-section.component';
+import { TeamSectionComponent } from './components/team-section/team-section.component';
+import { ServicesSectionComponent } from './components/services-section/services-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    HomeSectionComponent,
+    AboutSectionComponent,
+    TeamSectionComponent,
+    ServicesSectionComponent,
   ],
   imports: [
     BrowserModule,
