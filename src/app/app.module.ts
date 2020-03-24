@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from './../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
+import { DataService } from './services/data-db.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AngularFireModule } from '@angular/fire';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
