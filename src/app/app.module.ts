@@ -15,6 +15,7 @@ import { HomeSectionComponent } from './components/home-section/home-section.com
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { TeamSectionComponent } from './components/team-section/team-section.component';
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
+import { WorksComponent } from './components/works/works.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ServicesSectionComponent } from './components/services-section/services
     AboutSectionComponent,
     TeamSectionComponent,
     ServicesSectionComponent,
+    WorksComponent,
   ],
   imports: [
     BrowserModule,
