@@ -38,14 +38,23 @@
             <h2 class="h4 text-black mb-5">Contacto Form</h2> 
 
             <div class="row form-group">
-              <div class="col-md-6 mb-3 mb-md-0">
+              <div class="col-md-12 mb-3 mb-md-0">
                 <label class="text-black" for="fname">First Name</label>
                 <input type="text" formControlName="fname" id="fname" class="form-control">
+                <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" style="font-size: small; color: red;">
+                  <div *ngIf="fname.errors.required">
+                    Name is required.
+                  </div>
+                  <!-- <div>
+                    Name must be at least 5 characters long.
+                  </div> -->
+            </div>
               </div>
-              <div class="col-md-6">
+             
+              <!-- <div class="col-md-6">
                 <label class="text-black" for="lname">Last Name</label>
                 <input type="text" formControlName="lname"id="lname" class="form-control">
-              </div>
+              </div> -->
             </div>
 
             <div class="row form-group">
@@ -53,27 +62,43 @@
               <div class="col-md-12">
                 <label class="text-black" for="email">Email</label> 
                 <input type="email" formControlName="email" id="email" class="form-control">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" style="font-size: small; color: red;">
+                  <div *ngIf="email.errors.required">
+                    E-mail is required.
+                  </div>
+                  <!-- <div class="container-error-message">
+                    Name must be at least 5 characters long.
+                  </div> -->
+            </div>
               </div>
             </div>
 
-            <div class="row form-group">
+            <!-- <div class="row form-group">
               
               <div class="col-md-12">
                 <label class="text-black" for="subject">Subject</label> 
                 <input type="subject" formControlName="subject" id="subject" class="form-control">
               </div>
-            </div>
+            </div> -->
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="message">Message</label> 
                 <textarea name="message" formControlName="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                <div *ngIf="message.invalid && (message.dirty || message.touched)" style="font-size: small; color: red;">
+                  <div *ngIf="message.errors.required">
+                    Message is required.
+                  </div>
+                  <!-- <div class="container-error-message">
+                    Name must be at least 10 characters long.
+                  </div> -->
+            </div>
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
-                <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                <button (click)="showModal()" type="submit" class="btn btn-primary btn-md text-white">Send Message</button>
               </div>
             </div>
 
