@@ -35,7 +35,7 @@
 
           <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()" class="p-5 bg-white">
             
-            <h2 class="h4 text-black mb-5">Contacto Form</h2> 
+            <h2 class="h4 text-black mb-5">Contact Form</h2> 
 
             <div class="row form-group">
               <div class="col-md-12 mb-3 mb-md-0">
@@ -98,7 +98,7 @@
 
             <div class="row form-group">
               <div class="col-md-12">
-                <button (click)="showModal()" type="submit" class="btn btn-primary btn-md text-white">Send Message</button>
+                <button (click)="showModal()" type="submit" [disabled]="contactForm.invalid" class="btn btn-primary btn-md text-white">Send Message</button>
               </div>
             </div>
 
