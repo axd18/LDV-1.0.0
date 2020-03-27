@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data-db.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class FooterComponent implements OnInit {
   newsLetter: FormGroup;
+  Swal = 'sweetAlert';
 
   createFormGroup() {
     return new FormGroup({
@@ -29,6 +31,14 @@ export class FooterComponent implements OnInit {
   onSaveForm() {
     console.log('saved');
     this.dbData.saveMessage(this.newsLetter.value);
+  }
+
+  showModal() {
+    Swal.fire(
+      'E-mail sended!',
+      'Thank you! You will soon receive our newsletters.',
+      'success'
+    );
   }
 
 }
