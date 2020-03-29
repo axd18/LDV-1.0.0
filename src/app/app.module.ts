@@ -16,6 +16,13 @@ import { AboutSectionComponent } from './components/about-section/about-section.
 import { TeamSectionComponent } from './components/team-section/team-section.component';
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
 import { WorksComponent } from './components/works/works.component';
+import { Work1Component } from './pages/work1/work1.component';
+
+
+import { HomeComponent } from './pages/home/home.component';
+
+// rutas
+import { AppRoutingModule } from './app-routing-module';
 
 @NgModule({
   declarations: [
@@ -28,12 +35,15 @@ import { WorksComponent } from './components/works/works.component';
     TeamSectionComponent,
     ServicesSectionComponent,
     WorksComponent,
+    Work1Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
